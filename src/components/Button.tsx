@@ -13,28 +13,30 @@ interface ButtonProps extends TouchableOpacityProps {
     title: string
 }
 
-export function Button({ title, ...rest }: ButtonProps){
-    return(
-        <TouchableOpacity style={styles.container}>
-            <Text 
-            style={styles.text}
-            {...rest}
+export function Button({ title, ...rest }: ButtonProps) {
+    return (
+        <TouchableOpacity
+            style={styles.container}
+            {...rest}>
+            <Text
+                style={styles.text}
+
             >
-                { title }
+                {title}
             </Text>
         </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
-    container:{
+    container: {
         backgroundColor: colors.green,
         height: 56,
         borderRadius: 16,
         justifyContent: 'center',
         alignItems: 'center'
     },
-    text:{
+    text: {
         fontSize: 16,
         color: colors.white,
         fontFamily: fonts.heading

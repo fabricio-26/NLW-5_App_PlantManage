@@ -16,11 +16,13 @@ import wateringImg from '../assets/watering.png'
 import fonts from "../../styles/fonts";
 import { useNavigation } from '@react-navigation/core';
 
+
+
 export function Welcome() {
-  const { navigate } = useNavigation()
+  const navigation = useNavigation()
 
   function handleStart(){
-    navigate('UserIdentification')
+    navigation.navigate("UserIdentification")
   }
 
   return (
